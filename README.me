@@ -1,0 +1,40 @@
+Syntactic Analizer for Context Free Grammars.
+
+This project pretends to implement a simply Parser that given a specific grammar and list of inputs, the parser should be able to generate this inputs and returns if the input belongs to the grammar.
+
+
+Example of a normal input:
+
+1) It received three numbers (n, m, k) separated by blank spaces: 3 7 3
+
+First number is (n) the number of Non terminals that your grammar will have; Second number represents (m) the number of grammar rules. The last one represents (k) the number of inputs to be analysed.
+
+2) Enter the Non terminals separated by blank spaces (Don't repeat): S A B
+
+3) Enter your m grammar rules, it as follows: S-SA
+                                              S-aS
+                                              S-a  
+                                              A-bA
+                                              A-b          
+                                              A-B
+                                              B-c        
+                                                                                    
+
+First part represents the Non terminal rule, then, the '-' character will indicate the derivation rule.
+
+4) Enter your k inputs to be analyzed: abc
+                                       aabbccd
+                                       aaabbbcc
+
+In the last 3 cases (2, 3, 4) you need to enter each thing the number of times that was specificated in the first step.
+
+If you use correctly the previous example your ouput should be:
+
+yes
+no
+yes
+
+The algorithm accepts left-recursive grammars, however, it doesn't control this, so maybe that exist any grammar that presents problems and interrupt the execution. 
+
+:)
+
